@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="BeerTableViewCell" selectionStyle="default" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="BeerTableViewCell" customModule="Bar_beerMood" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Остаток пива " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEq-oC-nmB">
+                        <rect key="frame" x="8" y="40" width="256" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название пива" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRe-N0-uro">
+                        <rect key="frame" x="8" y="8" width="256" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="VW5-mt-hI6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="703-n6-jtt">
+                        <rect key="frame" x="280" y="26" width="32" height="28.333333333333329"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="YNc-cc-Me3"/>
+                            <constraint firstAttribute="width" constant="32" id="hfz-8d-6PI"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="703-n6-jtt" secondAttribute="trailing" constant="8" id="1nd-7A-jAA"/>
+                    <constraint firstItem="cEq-oC-nmB" firstAttribute="height" secondItem="TRe-N0-uro" secondAttribute="height" id="41P-aa-Mwy"/>
+                    <constraint firstAttribute="bottom" secondItem="703-n6-jtt" secondAttribute="bottom" constant="24" id="5Gs-vo-Ctx"/>
+                    <constraint firstItem="cEq-oC-nmB" firstAttribute="top" secondItem="TRe-N0-uro" secondAttribute="bottom" constant="8" id="Hr8-wb-Gx7"/>
+                    <constraint firstItem="TRe-N0-uro" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Mkj-i8-ahW"/>
+                    <constraint firstItem="cEq-oC-nmB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="PTd-FD-DdF"/>
+                    <constraint firstItem="TRe-N0-uro" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="YQ0-sE-iKJ"/>
+                    <constraint firstItem="703-n6-jtt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="bz0-Y7-NmQ"/>
+                    <constraint firstItem="703-n6-jtt" firstAttribute="leading" secondItem="TRe-N0-uro" secondAttribute="trailing" constant="16" id="kU3-ZI-zNu"/>
+                    <constraint firstItem="703-n6-jtt" firstAttribute="leading" secondItem="cEq-oC-nmB" secondAttribute="trailing" constant="16" id="n2E-Km-gP0"/>
+                    <constraint firstAttribute="bottom" secondItem="cEq-oC-nmB" secondAttribute="bottom" constant="8" id="v3b-is-ABI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="nameOfBeer" destination="TRe-N0-uro" id="oTZ-Da-wjk"/>
+                <outlet property="valueOfBeer" destination="cEq-oC-nmB" id="KJH-bV-Okn"/>
+            </connections>
+            <point key="canvasLocation" x="4.5801526717557248" y="-14.084507042253522"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
+    </resources>
+</document>
